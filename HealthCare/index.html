@@ -81,11 +81,8 @@
             // Check if Web3 is already injected by the browser (e.g., MetaMask)
             if (window.ethereum) {
         try {
-				// await window.ethereum.request({method: 'eth_requestAccounts'});
-		 //window.web3 = new Web3(window.ethereum);
-          await window.ethereum.enable();
+	   await window.ethereum.request({method: 'eth_requestAccounts'});
           const web3 = new Web3(window.ethereum);
-          //button.textContent = 'Connected';*/
         } catch (error) {
           console.error(error);
         }
